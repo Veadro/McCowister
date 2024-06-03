@@ -6,9 +6,11 @@ This project provides a simple web interface and API to control a DC motor conne
 
 - Raspberry Pi (any model with GPIO pins)
 - DROK DC motor driver
+https://a.co/d/9asvajf
 - DC motor(s)
 - Power supply (12V or 24V DC)
 - Jumper wires
+https://a.co/d/flmxawH (more then enough here)
 - Python 3
 - Flask
 - RPi.GPIO library
