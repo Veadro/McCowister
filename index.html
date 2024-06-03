@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function sendRequest(endpoint) {
+            fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json())
+              .then(data => console.log(data))
+              .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Motor Control</h1>
+    <button onclick="sendRequest('/motor/forward')">Left</button>
+    <button onclick="sendRequest('/motor/stop')">Stop</button>
+    <button onclick="sendRequest('/motor/backward')">Right</button>
+    <br>
+    <button onclick="sendRequest('/motor/faster')">Faster</button>
+    <button onclick="sendRequest('/motor/slower')">Slower</button>
+</body>
+</html>
